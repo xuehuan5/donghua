@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 宽度是设备宽度，初始缩放比例为一，用户最大最小缩放比例为一，不允许用户手动缩放 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<!-- 禁止ios设备将数字作为拨号连接，邮箱自动发送，点击地图跳转 -->
+	<meta name="format-detection" content="telephone=no,email=no，adress=no">
+	<!-- 强制全屏显示 -->
+	<meta name="full-screen" content="yes">
+	<!-- 开启对webapp的支持 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- web app 应用下状态条（屏幕顶部条）的颜色,默认值为 default（白色） -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- 禁止浏览器从的缓存中访问页面内容 -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style>
+		html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			background:url(./img/bg.png) no-repeat;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		.log{
+			width: 25%;
+			height: 6%;
+			background: url(./img/a1.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 5%;top: 3%;
+		}
+		.mp3{
+			width: 6%;
+			height: 3%;
+			background: url(./img/a2.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			right: 5%;top: 4%;
+		}
+		.banner{
+			width: 45%;
+			height: 8%;
+			background: url(./img/zi.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 30%;top: 12%;
+		}
+		.banner h2{
+			width: 180%;
+			height: 25%;
+			background: url(./img/tit.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: -40%;bottom: -25%;
+		}
+		.con{
+			width: 90%;
+			height: 45%;
+			background: url(./img/f4.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 5%;top: 32%;
+		}
+		.con h3{
+			width: 105%;
+			height: 100%;
+			position: absolute;
+			left: -2%;
+			top: 0%;
+			background: url(./img/f2.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.con h4{
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			left: 15%;
+			top: -5%;
+			background: url(./img/f1.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.btn{
+			width: 200px;
+			height: 50px;
+			background: url(./img/button.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 50%;bottom: 9%;
+			margin-left: -100px;
+			z-index: 22;
+		}
+		.btn p{
+			width: 80%;
+			height: 30%;
+			background: url(./img/ftiti.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			bottom: -40%;
+			left: 10%;
+		}
+
+.animated {
+  -webkit-animation-duration:3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated1 {
+  -webkit-animation-delay:.5s;
+  -webkit-animation-duration:3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated2 {
+  -webkit-animation-duration:3.5s;
+  animation-duration: 3.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated3 {
+  -webkit-animation-duration:3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+    -ms-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@keyframes bounceInDown1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    -ms-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown1 {
+  -webkit-animation-name: bounceInDown1;
+  animation-name: bounceInDown1;
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    -ms-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@keyframes fadeOutUp {
+  0% {
+  	 opacity: 0;
+    -webkit-transform: translate3d(0, 0%, 0);
+    -ms-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, -7%, 0);
+    -ms-transform: translate3d(0, -7%, 0);
+    transform: translate3d(0, -7%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@keyframes fadeOutUp1 {
+  0% {
+  	 opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    -ms-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, -10%, 0);
+    -ms-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+}
+
+.fadeOutUp1 {
+  -webkit-animation-name: fadeOutUp1;
+  animation-name: fadeOutUp1;
+}
+
+	</style>
+</head>
+<body>
+	
+	<div class="box">
+		<div class="log"></div>
+		<div class="mp3"></div>
+		<div class="banner animated1 bounceInDown">
+			<h2 class="animated2 bounceInDown1"></h2>
+		</div>
+		<div class="con">
+			<h3 class="animated fadeOutUp"></h3>
+			<h4 class="animated3 fadeOutUp1"></h4>
+		</div>
+		<div class="btn animated1 bounceInUp">
+			<p></p>
+		</div>
+	</div>
+
+</body>
+</html>
